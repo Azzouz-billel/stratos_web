@@ -796,4 +796,11 @@
     right: 0;
     text-align: center;
 }
+  .button-container1 {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 10px;
+    text-align: center;
+}
 }
