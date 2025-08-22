@@ -804,3 +804,314 @@
     text-align: center;
 }
 }
+
+
+
+
+
+
+
+.projects-container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+
+
+    border: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+
+
+
+
+        .project-info {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .project-badge {
+            color: #60A5FA;
+            font-size: 1.125rem;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            transition: all 0.5s ease;
+        }
+
+        .project-subtitle {
+            font-size: 1.5rem;
+            color: #D1D5DB;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.025em;
+        }
+
+        .project-description {
+            font-size: 1rem;
+            color: #9CA3AF;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+        }
+
+        .project-navigation {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-item {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0.6;
+        }
+
+        .nav-item.active {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        .nav-item:hover {
+            opacity: 0.8;
+        }
+
+        .nav-bar {
+            width: 4rem;
+            height: 0.25rem;
+            background: #4B5563;
+            margin-bottom: 0.5rem;
+            transition: all 0.5s ease;
+        }
+
+        .nav-item.active .nav-bar {
+            background: #3B82F6;
+        }
+
+        .nav-number {
+            font-size: 0.75rem;
+            color: #9CA3AF;
+            margin-bottom: 0.25rem;
+        }
+
+        .nav-title {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #6B7280;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item.active .nav-title {
+            color: white;
+        }
+
+        .plus-button {
+            border: 1px solid #6B7280;
+            border-radius: 9999px;
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .plus-button:hover {
+            border-color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .video-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-frame {
+            position: relative;
+        }
+
+        .video-container {
+            width: 500px;
+            height: 350px;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 2px solid #374151;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0);
+            position: relative;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .timer-container {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 10;
+        }
+
+        .timer-circle {
+            width: 2rem;
+            height: 2rem;
+            position: relative;
+        }
+
+        .timer-bg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .timer-progress {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(-90deg);
+        }
+
+        .progress-ring {
+            stroke-dasharray: 87.96;
+            stroke-dashoffset: 87.96;
+            stroke-linecap: round;
+            animation: progress 5s linear infinite;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1rem;
+            height: 1rem;
+            color: white;
+        }
+
+        .frame-decoration {
+            position: absolute;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .decoration-tl {
+            top: -0.5rem;
+            left: -0.5rem;
+            border-left: 2px solid #3B82F6;
+            border-top: 2px solid #3B82F6;
+            border-top-left-radius: 0.5rem;
+        }
+
+        .decoration-tr {
+            top: -0.5rem;
+            right: -0.5rem;
+            border-right: 2px solid #3B82F6;
+            border-top: 2px solid #3B82F6;
+            border-top-right-radius: 0.5rem;
+        }
+
+        .decoration-bl {
+            bottom: -0.5rem;
+            left: -0.5rem;
+            border-left: 2px solid #3B82F6;
+            border-bottom: 2px solid #3B82F6;
+            border-bottom-left-radius: 0.5rem;
+        }
+
+        .decoration-br {
+            bottom: -0.5rem;
+            right: -0.5rem;
+            border-right: 2px solid #3B82F6;
+            border-bottom: 2px solid #3B82F6;
+            border-bottom-right-radius: 0.5rem;
+        }
+
+        .progress-dots {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .progress-dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background: #4B5563;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .progress-dot:hover {
+            background: #6B7280;
+        }
+
+        .progress-dot.active {
+            background: #3B82F6;
+            width: 2rem;
+            border-radius: 0.25rem;
+        }
+
+        @keyframes progress {
+            from { 
+                stroke-dashoffset: 87.96;
+            }
+            to { 
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .projects-container {
+                flex-direction: column;
+                padding: 2rem;
+                gap: 3rem;
+            }
+
+            .project-title {
+                font-size: 3rem;
+            }
+
+            .video-container {
+                width: 400px;
+                height: 280px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .project-title {
+                font-size: 2rem;
+            }
+
+            .video-container {
+                width: 320px;
+                height: 240px;
+            }
+
+            .project-navigation {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+
+
+
