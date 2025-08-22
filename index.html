@@ -80,52 +80,83 @@
             </section>
             
             <!-- Focus areas section -->
-            <section class="cards section" id="projects focus">
-      <h2 class="title">projects</h2>
-      <div class="content">
-        <div class="work-list">
-          <div class="work">
-            <img src="images/1.png"> 
-            <div class="layer">
-              <h3> mathurance exp
-              </h3>
-              <p>Stratos proudly took part in Mathurance, a major hackathon blending mathematics, innovation, and real-world problem-solving. In collaboration with top insurance companies and institutions, our team tackled challenges with creativity, logic, and teamwork—marking one of our most enriching experiences yet.
-
-</p>
-              <a href="https://mathurance-website.vercel.app/problem" target="_blank"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+            <section class="section">
+       <div class="projects-container">
+        <!-- Project Info Section -->
+        <div class="project-info">
+            <div class="project-badge">STRATOS CLUB PROJECTS</div>
+            <h1 class="project-title" id="projectTitle">MATHURANCE </h1>
+            <p class="project-subtitle" id="projectSubtitle">AI & Insurance Hackathon 2025</p>
+            <p class="project-description" id="projectDescription">innovate. Collaborate. Transform. A hackathon like no other, a first of its kind</p>
+            
+            <div class="project-navigation">
+                <div class="nav-item active" data-project="0">
+                    <div class="nav-bar"></div>
+                    <div class="nav-number">1</div>
+                    <div class="nav-title">MATHURANCE</div>
+                </div>
+                <div class="nav-item" data-project="1">
+                    <div class="nav-bar"></div>
+                    <div class="nav-number">2</div>
+                    <div class="nav-title">OUT CODE</div>
+                </div>
+                <div class="nav-item" data-project="2">
+                    <div class="nav-bar"></div>
+                    <div class="nav-number">3</div>
+                    <div class="nav-title">WORKSHOP</div>
+                </div>
+                <div class="nav-item" data-project="3">
+                    <div class="nav-bar"></div>
+                    <div class="nav-number">4</div>
+                    <div class="nav-title">WORKSHOP</div>
+                </div>
+                
+                <button class="plus-button">Plus →</button>
             </div>
-          </div>
-          <div class="work">
-            <img src="images/2.png"> 
-            <div class="layer">
-              <h3> out code</h3>
-              <p>OutCode is Stratos’ very own Python coding challenge—designed to push logic, speed, and problem-solving to the limit. It brings together passionate coders in a competitive and fun environment to sharpen their skills and showcase their talent.
-
-</p>
-              
-            </div>
-          </div>
-          <div class="work">
-            <img src="images/3.png"> 
-            <div class="layer">
-              <h3> workshops </h3>
-              <p>Stratos regularly hosts hands-on workshops in coding, electronics, astronomy, and game theory. These sessions empower members to learn new skills, explore real-world applications, and collaborate on exciting tech-driven projects.
-
-
-
-</p>
-              
-            </div>
-          </div>
-          <div class="button-container">
-        <button type="button" class="btn">see more </button>
         </div>
 
+        <!-- Video Section -->
+        <div class="video-section">
+            <div class="video-frame">
+                <div class="video-container">
+                    <video id="projectVideo" autoplay muted loop>
+                        <source src="images/mathurance.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    <!-- Timer -->
+                    <div class="timer-container">
+                        <div class="timer-circle">
+                            <svg class="timer-bg" viewBox="0 0 32 32">
+                                <circle cx="16" cy="16" r="14" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none"/>
+                            </svg>
+                            <svg class="timer-progress" viewBox="0 0 32 32">
+                                <circle class="progress-ring" cx="16" cy="16" r="14" stroke="#3B82F6" stroke-width="2" fill="none"/>
+                            </svg>
+                            <svg class="play-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Frame Decorations -->
+                <div class="frame-decoration decoration-tl"></div>
+                <div class="frame-decoration decoration-tr"></div>
+                <div class="frame-decoration decoration-bl"></div>
+                <div class="frame-decoration decoration-br"></div>
+            </div>
         </div>
-        
+
+        <!-- Progress Dots -->
+        <div class="progress-dots">
+            <div class="progress-dot active" data-project="0"></div>
+            <div class="progress-dot" data-project="1"></div>
+            <div class="progress-dot" data-project="2"></div>
+            <div class="progress-dot" data-project="3"></div>
+            <div class="progress-dot" data-project="4"></div>
         </div>
-      </div>
-    </section>
+    </div>
             <!-- managers section -->
              <div class="members-section" id="members">
         <div class="section-title">
@@ -554,5 +585,117 @@
       .catch(error => console.error('Error!', error.message))
   })
 </script>
+    <script>
+        // Project data - UPDATE THIS WITH YOUR ACTUAL PROJECTS
+        const projects = [
+            {
+                title: "MATHURANCE",
+                subtitle: "Calculating the Future, Securing today",
+                videoUrl: "images/mathurance.mp4",
+                description: "Innovate. Collaborate. Transform. A hackathon like no other, a first of its kind"
+            },
+            {
+                  title: "OUT CODE",
+                  subtitle: "Innovation Through Collaboration",
+                    videoUrl: "images/outcode.mp4",
+                    description: "A coding event where teams turned creative ideas into real prototypes through collaboration and problem-solving."
+            },
+            {
+                 title: "Game Theory Session",
+                 subtitle: "Mathematics of Strategy and Choice",
+                 videoUrl: "images/gamet.mp4",
+                 description: "An introduction to strategic thinking, covering key concepts like Nash equilibrium and real-world applications."
+            },
+            
+            {
+                 title: "Astronomy Presentation",
+                 subtitle: "Exploring the Wonders of the Universe",
+                  videoUrl: "images/astro.mp4",
+                 description: "A captivating journey through stars, planets, and galaxies, introducing students to the beauty and science of the cosmos."
+            }
+            //hna tzid 
+        ];
+
+        let currentProject = 0;
+        let autoAdvanceInterval;
+
+        // DOM elements
+        const projectTitle = document.getElementById('projectTitle');
+        const projectSubtitle = document.getElementById('projectSubtitle');
+        const projectDescription = document.getElementById('projectDescription');
+        const projectVideo = document.getElementById('projectVideo');
+        const navItems = document.querySelectorAll('.nav-item');
+        const progressDots = document.querySelectorAll('.progress-dot');
+
+        // Update project display
+        function updateProject(index) {
+            const project = projects[index];
+            
+            // Update text content with smooth transition
+            projectTitle.style.opacity = '0';
+            setTimeout(() => {
+                projectTitle.textContent = project.title;
+                projectTitle.style.opacity = '1';
+            }, 250);
+            
+            projectSubtitle.textContent = project.subtitle;
+            projectDescription.textContent = project.description;
+            
+            // Update video
+            projectVideo.src = project.videoUrl;
+            
+            // Update navigation
+            navItems.forEach((item, i) => {
+                item.classList.toggle('active', i === index);
+            });
+            
+            // Update progress dots
+            progressDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            
+            currentProject = index;
+        }
+
+        // Auto-advance function
+        function startAutoAdvance() {
+            if (autoAdvanceInterval) {
+                clearInterval(autoAdvanceInterval);
+            }
+            
+            autoAdvanceInterval = setInterval(() => {
+                const nextProject = (currentProject + 1) % projects.length;
+                updateProject(nextProject);
+            }, 5000);
+        }
+
+        // Initialize
+        function init() {
+            // Set up navigation click handlers
+            navItems.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    updateProject(index);
+                    startAutoAdvance(); // Restart timer
+                });
+            });
+            
+            // Set up progress dot click handlers
+            progressDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    updateProject(index);
+                    startAutoAdvance(); // Restart timer
+                });
+            });
+            
+            // Start auto-advance
+            startAutoAdvance();
+            
+            // Smooth transitions
+            projectTitle.style.transition = 'opacity 0.5s ease';
+        }
+
+        // Start when page loads
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
 </body>
 </html>
