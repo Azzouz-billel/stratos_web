@@ -18,6 +18,7 @@
             overflow-y: auto;
             overflow-x: hidden;
             perspective: 1px;
+          scroll-behavior: smooth;
         }
 
         /* Background layers for space effect */
@@ -1117,6 +1118,7 @@
                 gap: 1rem;
             }
         }
+
 
 
 
