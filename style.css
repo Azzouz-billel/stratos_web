@@ -307,7 +307,7 @@
 
         /* Responsive design */
         @media (max-width: 768px) {
-          edia (max-width: 768px) {
+         
               .earth {
         bottom: -30vh; /* higher on phones/tablets */
         width: 100vw;  /* smaller so it fits */
@@ -1127,6 +1127,7 @@
                 gap: 1rem;
             }
         }
+
 
 
 
