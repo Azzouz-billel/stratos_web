@@ -1096,7 +1096,7 @@
   }
 
   .nav a {
-    font-size: 0.9rem; /* Smaller font for mobile */
+    font-size: 0.8rem; /* Smaller font for mobile */
   }
   .button-container {
     position: absolute;
@@ -1113,6 +1113,7 @@
     text-align: center;
 }
 }
+
 
 
 
