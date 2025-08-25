@@ -1066,14 +1066,17 @@
             }
         }
    
-@media (max-width: 768px) {
-     .parallax-inner {
-    perspective: 2px;   /* was 1px, too flat */
+@media (max-width: 1040px) {
+      .parallax-inner {
+    perspective: none;
+    transform-style: flat;
   }
      .earth {
-    bottom: -5vh;   /* was -30vh */
-    width: 110vw;
-    height: 110vw;
+    bottom: -10vh;   /* was -30vh */
+   width: 110vw;
+     height: 110vw;
+    max-width: 500px;
+    max-height: 500px;
   }
   .nav {
     padding: 1rem 1rem; /* Less padding on mobile */
@@ -1110,6 +1113,7 @@
     text-align: center;
 }
 }
+
 
 
 
