@@ -306,34 +306,7 @@
         }
 
         /* Responsive design */
-        @media (max-width: 768px) {
-         
-              .earth {
-        bottom: -30vh; /* higher on phones/tablets */
-        width: 100vw;  /* smaller so it fits */
-        height: 100vw;
-    }
-            .logo {
-                font-size: 2.5rem;
-            }
-            
-            .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .tagline {
-                font-size: 1rem;
-            }
-            
-            .section h2 {
-                font-size: 2rem;
-            }
-            
-            .nav ul {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
+        
         
 .logo-img {
   width: 400px;
@@ -1127,9 +1100,34 @@
                 gap: 1rem;
             }
         }
-
-
-
+@media (max-width: 768px) {
+         
+              .earth {
+        bottom: -30vh; /* higher on phones/tablets */
+        width: 100vw;  /* smaller so it fits */
+        height: 100vw;
+    }
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            .section h2 {
+                font-size: 2rem;
+            }
+            
+            .nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
 
 
 
